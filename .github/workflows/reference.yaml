@@ -1,4 +1,4 @@
-name: Spring Boot CI
+name: reference-service
 
 on:
   push:
@@ -37,3 +37,9 @@ jobs:
 
       - name: Run Tests
         run: mvn test
+
+      - name: Docker
+        run: docker build -t springboot-app .
+
+      - name: Verify Docker Image
+        run: docker images
