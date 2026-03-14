@@ -63,7 +63,7 @@ public class TransactionController {
         );
     }
 
-    // ✅ Filter by Merchant Name
+    //  Filter by Merchant Name
     @GetMapping("/by-merchant")
     public ResponseEntity<Page<Transaction>> filterByMerchant(
             @RequestParam String merchant,

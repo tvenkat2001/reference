@@ -1,4 +1,4 @@
-package com.alacriti.reference;
+package com.alacriti.reference.validation;
 
 import com.alacriti.reference.entity.VirtualCard;
 import com.alacriti.reference.model.input.CreateTransactionInput;
