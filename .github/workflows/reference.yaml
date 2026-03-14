@@ -1,4 +1,4 @@
-name: Spring Boot CI
+name: reference-service
 
 on:
   push:
@@ -22,7 +22,7 @@ jobs:
         uses: actions/setup-java@v3
         with:
           distribution: 'temurin'
-          java-version: '17'
+          java-version: '21'
 
       - name: Cache Maven Dependencies
         uses: actions/cache@v3
@@ -37,3 +37,9 @@ jobs:
 
       - name: Run Tests
         run: mvn test
+
+      - name: Docker
+        run: docker build -t springboot-app .
+
+      - name: Verify Docker Image
+        run: docker images
